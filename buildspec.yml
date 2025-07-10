@@ -7,11 +7,14 @@ phases:
     commands:
       - echo Installing dependencies...
       - pip install -r requirements.txt || true
+      - pip install pyspark
 
   build:
     commands:
-      - echo Build phase - no ETL logic yet
+      - echo Checking syntax of ETL scripts...
+      - python -m py_compile etl/*.py
 
 artifacts:
   files:
     - '**/*'
+
