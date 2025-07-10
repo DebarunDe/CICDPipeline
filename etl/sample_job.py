@@ -4,7 +4,6 @@ from awsglue.context import GlueContest
 from pyspark.context import SparkContext
 
 #for testing locally, wrap in try/except
-#just for testing comm
 try:
     args = getResolvedOptions(sys.argv, ['JOB_NAME'])
     sc = SparkContext()
