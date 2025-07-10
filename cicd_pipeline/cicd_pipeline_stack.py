@@ -145,6 +145,9 @@ class CICDPipelineStack(Stack):
         etl_asset = s3_assets.Asset(self, "ETLScriptAsset",
             path="etl/sample_job.py"
         )
+        
+        #grant read permissions to glue role
+        etl_asset.grant_read(glue_role)
 
         # Define the Glue Job
         glue.CfnJob(self, "GlueETLJob",
