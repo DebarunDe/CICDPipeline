@@ -24,3 +24,5 @@ ENV/
 # IDE/editor
 .vscode/
 .idea/
+
+*.bat
